@@ -182,7 +182,7 @@
     function btnAClick(e){
       active = true;
       startTime = new Date();
-        
+     
         
     }
 
@@ -200,10 +200,10 @@
         parseInt($("#second").val());
         $("#time").html("経過時間:0");
         $("#remain").html("残り時間:" + period);
+        $("#remain").css("color", "#ff0000");
         if(period == 0){
           alarm();
         }
-        
     }
    
     
@@ -221,8 +221,10 @@
         active = false;
         alarm();
       }
-        
-        
+      if(rest <= 5){
+         $("#remain").css("color", "#0000ff");
+      }
+      
     } 
 
   </script>
